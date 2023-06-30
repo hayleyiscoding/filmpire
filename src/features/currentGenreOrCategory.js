@@ -9,7 +9,7 @@ export const genreOrCategory = createSlice({
   },
   reducers: {
     selectGenreOrCategory: (state, action) => {
-      console.log(action.payload); // this is where get info on which genre has been clicked on.
+      // console.log(action.payload); // this is where get info on which genre has been clicked on.
       state.genreIdOrCategoryName = action.payload;
       state.searchQuery = '';
     },

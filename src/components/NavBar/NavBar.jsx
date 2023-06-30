@@ -19,7 +19,7 @@ const Navbar = () => {
   const { isAuthenticated, user } = useSelector(userSelector);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  console.log(user);
+  // console.log(user);
 
   const colorMode = useContext(ColorModeContext);
 

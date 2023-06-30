@@ -18,7 +18,7 @@ const Pagination = ({ currentPage, setPage, totalPages }) => {
   return (
     <div className={classes.container}>
       <Button onClick={handlePrev} variant="contained" className={classes.button} color="primary" type="button">Prev</Button>
-      <Typography variant="h4" className={classes.pageNumber}>{currentPage}</Typography>
+      <Typography variant="h6" className={classes.pageNumber}>{currentPage}</Typography>
       <Button onClick={handleNext} variant="contained" className={classes.button} color="primary" type="button">Next</Button>
     </div>
   );
