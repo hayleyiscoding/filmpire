@@ -7,6 +7,8 @@ import { ColorModeContext } from '../utils/ToggleColorMode';
 import { fetchToken } from '../utils/index';
 import { selectGenreOrCategory, searchMovie } from '../features/currentGenreOrCategory';
 
+const alanKey = `${process.env.REACT_APP_ALAN_SDK_KEY}`;
+
 const useAlan = () => {
   const { setMode } = useContext(ColorModeContext);
   const dispatch = useDispatch();
@@ -14,7 +16,7 @@ const useAlan = () => {
 
   useEffect(() => {
     alanBtn({
-      key: process.env.REACT_APP_ALAN_SDK_KEY,
+      key: alanKey,
       onCommand: ({ command, mode, genres, genreOrCategory, query }) => {
         if (command === 'chooseGenre') {
           const foundGenre = genres.find((g) => g.name.toLowerCase() === genreOrCategory.toLowerCase());
