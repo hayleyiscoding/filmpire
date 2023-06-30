@@ -13,7 +13,7 @@ const Search = () => {
   const dispatch = useDispatch();
   const location = useLocation();
 
-  if (location.pathname !== '/') return null;
+  if (location.pathName !== '/') return null;
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {

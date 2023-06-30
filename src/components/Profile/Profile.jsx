@@ -17,7 +17,7 @@ const Profile = () => {
     refetchWatchlisted();
   }, []);
 
-  console.log(user);
+  // console.log(user);
 
   const logout = () => {
     localStorage.clear();

@@ -11,6 +11,6 @@ export default makeStyles(() => ({
     width: '100%',
   },
   toolbar: {
-    height: '70px',
+    height: '30px',
   },
 }));
