@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { CssBaseline } from '@mui/material';
 import { Switch, Route } from 'react-router-dom';
-
 import useStyles from './styles.js';
-
+import useAlan from './Alan';
 import { Movies, Actors, MovieInformation, NavBar, Profile } from './index';
 
 const App = () => {
   const classes = useStyles();
+  const alanBtnContainer = useRef();
+
+  useAlan();
 
   return (
     <div className={classes.root}>
@@ -30,6 +32,7 @@ const App = () => {
           </Route>
         </Switch>
       </main>
+      <div ref={alanBtnContainer} />
     </div>
   );
 };
